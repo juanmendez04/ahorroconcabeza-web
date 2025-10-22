@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Ahorro con Cabeza | Comparador de precios y consejos de ahorro
+    </title>
+    <meta
+      name="description"
+      content="Tu guía en español para comparar precios, encontrar los mejores consejos de ahorro y trucos financieros inteligentes."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --primary-color: #667eea;
+        --secondary-color: #764ba2;
+        --text-color: #333;
+        --bg-off-white: #FAF9F6; /* Nuevo fondo principal */
+        --bg-white: #ffffff;      /* Blanco para secciones */
+        --bg-light-gray: #f8f9fa; /* Gris muy claro */
+        --bg-medium-gray: #e9ecef;
+        --border-color: #eee;     /* Color de borde sutil */
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background: var(--bg-off-white); /* Usamos el nuevo fondo off-white */
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.98); /* Mantenemos cabecera blanca */
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Sombra más sutil */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-color); /* Borde inferior sutil */
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+
+      /* --- Arreglo Logo Emoji --- */
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        /* Quitamos degradado de aquí */
+      }
+      .logo-text {
+         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      /* --- Fin Arreglo --- */
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      nav a:hover {
+        color: #667eea;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #667eea;
+        transition: width 0.3s ease;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .hero {
+        background: var(--bg-white); /* Fondo blanco para destacar */
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        padding: 4rem 3rem;
+        text-align: center;
+        margin-bottom: 3rem; /* Re-añadido margen inferior */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        animation: fadeIn 0.8s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-title-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .cta-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+      }
+
+      .cta-secondary {
+        background: white;
+        color: #667eea;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        border: 2px solid #667eea;
+        transition: all 0.3s ease;
+      }
+
+      .cta-secondary:hover {
+        background: #667eea;
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .stats-banner {
+        background: var(--bg-light-gray); /* Fondo gris claro */
+        border-radius: 20px;
+        border: 1px solid var(--border-color);
+        padding: 2rem;
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 2rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .stat-label {
+        color: #666;
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      .adsense-slot {
+        background: var(--bg-medium-gray); /* Fondo gris medio */
+        border: 1px dashed #ccc; /* Borde más sutil */
+        border-radius: 15px;
+        padding: 3rem;
+        text-align: center;
+        margin: 2rem 0;
+        color: #666; /* Texto gris oscuro */
+        font-weight: 600;
+      }
+
+      .content-grid {
+        background: var(--bg-white); /* Fondo blanco */
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-bottom: 3rem; /* Añadido margen inferior */
+      }
+
+      .content-grid h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .content-grid-title-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .post {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid var(--border-color);
+      }
+
+      .post:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+        border-color: #bbb;
+      }
+
+      .post h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      .post p {
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateX(3px);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      }
+
+      .newsletter {
+        background: var(--bg-light-gray); /* Fondo gris claro */
+        border-radius: 20px;
+        padding: 3rem;
+        text-align: center;
+        margin: 3rem 0;
+        color: var(--text-color); /* Texto oscuro */
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-color);
+      }
+
+      .newsletter h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color); /* Texto oscuro */
+      }
+
+      .newsletter p {
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+        color: #666; /* Texto gris */
+      }
+
+      .newsletter-form {
+        display: flex;
+        gap: 1rem;
+        max-width: 500px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .newsletter input {
+        flex: 1;
+        min-width: 250px;
+        padding: 1rem;
+        border: 1px solid #ccc; /* Añadido borde */
+        border-radius: 50px;
+        font-size: 1rem;
+      }
+
+      .newsletter button {
+        padding: 1rem 2rem;
+        background: var(--primary-color); /* Botón con color primario */
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        background: var(--secondary-color); /* Cambio de color al hover */
+      }
+
+      #messageBox {
+        color: #28a745 !important; /* Verde oscuro para éxito */
+      }
+
+      footer {
+        background: var(--bg-light-gray); /* Fondo gris claro */
+        margin-top: 3rem;
+        padding: 2rem;
+        text-align: center;
+        border-top: 1px solid var(--border-color); /* Borde superior sutil */
+        /* Eliminado border-radius */
+      }
+
+      footer p {
+        margin: 0.5rem 0;
+        color: #666;
+      }
+
+      footer a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #764ba2;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0.5rem 1rem;
+          align-items: center;
+        }
+
+        nav ul {
+          flex-direction: row;
+          justify-content: center;
+          gap: 1.5rem;
+          width: 100%;
+          padding-top: 0.5rem;
+        }
+
+        .logo {
+          font-size: 1.5rem;
+        }
+        /* Aseguramos que el span del logo también se reduzca */
+        .logo-text { font-size: 1.5rem; }
+        nav a::after {
+          display: none;
+        }
+
+        main {
+          padding: 1rem;
+        }
+
+        .hero {
+          padding: 2rem 1.5rem;
+        }
+
+        .hero h1,
+        .hero-title-text {
+          font-size: 1.8rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+          gap: 0.5rem;
+        }
+
+        .cta-primary,
+        .cta-secondary {
+          width: 100%;
+          text-align: center;
+          padding: 0.8rem 1.5rem;
+          font-size: 1rem;
+        }
+
+        .stats-banner {
+          flex-direction: column;
+          gap: 1.5rem;
+          padding: 1.5rem;
+        }
+
+        .content-grid {
+          padding: 1.5rem;
+          margin-bottom: 1.5rem; /* Ajuste margen móvil */
+        }
+
+        .content-grid h2,
+        .content-grid-title-text {
+          font-size: 1.8rem;
+        }
+
+        .posts-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .post {
+          padding: 1.5rem;
+        }
+
+        .post h3 {
+          font-size: 1.2rem;
+        }
+
+        .newsletter {
+          padding: 2rem 1.5rem;
+        }
+
+        .newsletter h2 {
+          font-size: 1.5rem;
+        }
+
+        .newsletter-form {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .newsletter input,
+        .newsletter button {
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1,
+        .hero-title-text {
+          font-size: 1.5rem;
+        }
+
+        .stat-number {
+          font-size: 2rem;
+        }
+
+        .content-grid h2,
+        .content-grid-title-text {
+          font-size: 1.5rem;
+        }
+
+        nav ul {
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">💰 <span class="logo-text">Ahorro con Cabeza</span></div>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#ahorro">Consejos</a></li>
+          <li><a href="#apps">Apps</a></li>
+          <li><a href="acerca.html">Nosotros</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>🎯 <span class="hero-title-text">Ahorra inteligentemente</span></h1>
+        <p>
+          La mejor información para que tu dinero trabaje para ti, sin trucos ni
+          letra pequeña. Descubre estrategias probadas por miles de personas.
+        </p>
+        <div class="cta-buttons">
+          <a href="#ahorro" class="cta-primary">Ver Consejos Gratis</a>
+          <a href="#newsletter" class="cta-secondary">Únete al Newsletter</a>
+        </div>
+      </section>
+
+      <div class="stats-banner">
+        <div class="stat-item">
+          <div class="stat-number">+50k</div>
+          <div class="stat-label">Lectores mensuales</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">300€</div>
+          <div class="stat-label">Ahorro promedio/mes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Contenido gratuito</div>
+        </div>
+      </div>
+
+      <div class="adsense-slot">
+        <p>📢 ESPACIO PUBLICITARIO</p> </div>
+
+      <section class="content-grid" id="ahorro">
+        <h2>
+          💡 <span class="content-grid-title-text">Consejos Destacados</span>
+        </h2>
+
+        <div class="posts-grid">
+          <article class="post">
+            <h3>💵 Ahorra 300€ al mes sin esfuerzo</h3>
+            <p>
+              8 ajustes automáticos y prácticos para ahorrar 300€ mensuales sin
+              sacrificios.
+            </p>
+            <a href="post-ahorrar-300.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>🚗 Ahorra en gasolina: 10 trucos</h3>
+            <p>
+              Apps inteligentes, conducción eficiente y hábitos simples que
+              marcan la diferencia.
+            </p>
+            <a href="post-ahorro-gasolina.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>🛒 10 trucos para ahorrar en el súper</h3>
+            <p>
+              Reduce tu gasto en el supermercado un 30% sin comprar peores
+              productos.
+            </p>
+            <a href="post-ahorrar-supermercado.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>🍲 Batch Cooking para principiantes</h3>
+            <p>
+              Cocina 2 horas un día y come toda la semana. Ahorra tiempo y
+              dinero.
+            </p>
+            <a href="post-batch-cooking.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>🏦 Las 5 mejores cuentas sin comisiones</h3>
+            <p>
+              Comparamos Openbank, N26, Revolut y más. Deja de pagar
+              comisiones.
+            </p>
+            <a href="post-cuentas-sin-comisiones.html" class="btn"
+              >Leer Más →</a
+            >
+          </article>
+
+          <article class="post">
+            <h3>📱 La mejor tarifa móvil por < 10€</h3>
+            <p>
+              Comparamos OMV como Simyo, Digi o Lowi para que pagues menos.
+            </p>
+            <a href="post-mejor-tarifa-movil.html" class="btn">Leer Más →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-grid" id="apps">
+        <h2>
+          📱 <span class="content-grid-title-text">Apps Recomendadas</span>
+        </h2>
+
+        <div class="posts-grid">
+          <article class="post">
+            <h3>💸 Las mejores 7 apps que te pagan por caminar</h3>
+            <p>
+              Convierte tus pasos en dinero, premios o criptomonedas con
+              Sweatcoin y más.
+            </p>
+            <a href="post-apps-caminar.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>💸 Guía Completa Apps de Cashback</h3>
+            <p>
+              Recupera dinero de tus compras online con Letyshops, iGraal,
+              Beruby...
+            </p>
+            <a href="post-apps-cashback.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>📊 Las 5 Mejores Apps para Controlar Gastos</h3>
+            <p>
+              Gestiona tu presupuesto con Fintonic, Spendee, Wallet y más apps
+              gratuitas.
+            </p>
+            <a href="post-apps-presupuesto.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>🤫 5 Apps Secretas para Ahorrar en el Súper</h3>
+            <p>
+              Agrupa tarjetas, compara precios y encuentra ofertas ocultas.
+            </p>
+            <a href="post-apps-supermercado.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>✍️ Gana Dinero Extra con Encuestas y Tareas</h3>
+            <p>
+              Comparamos Google Rewards, AttaPoll y más apps para ganar dinero
+              extra.
+            </p>
+            <a href="post-apps-encuestas.html" class="btn">Leer Más →</a>
+          </article>
+
+          <article class="post">
+            <h3>📈 Apps de Inversión para Principiantes</h3>
+            <p>
+              Empieza a invertir fácil con MyInvestor, Indexa Capital
+              (Roboadvisors).
+            </p>
+            <a href="post-apps-inversion.html" class="btn">Leer Más →</a>
+          </article>
+        </div>
+      </section>
+
+      <div class="adsense-slot">
+        <p>📢 ESPACIO PUBLICITARIO</p> </div>
+
+      <section class="newsletter" id="newsletter">
+        <h2>📬 Únete a +10,000 ahorradores inteligentes</h2>
+        <p>
+          Recibe consejos exclusivos y trucos de ahorro directamente en tu
+          email. ¡100% gratis!
+        </p>
+        <div class="newsletter-form">
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="tu@email.com"
+            required
+          />
+          <button type="button" id="subscribeBtn">Suscribirme Gratis</button>
+        </div>
+        <p
+          id="messageBox"
+          style="margin-top: 1rem; font-weight: 600; display: none"
+        ></p>
+      </section>
+
+      <script>
+        // Mantenemos el script original intacto
+        document
+          .getElementById("subscribeBtn")
+          .addEventListener("click", function () {
+            const emailInput = document.getElementById("emailInput");
+            const messageBox = document.getElementById("messageBox");
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+              messageBox.textContent = "❌ Por favor, ingresa tu email";
+              messageBox.style.display = "block";
+              messageBox.style.color = "#ff6b6b"; // Rojo para error
+              return;
+            }
+            if (!emailRegex.test(email)) {
+              messageBox.textContent = "❌ Por favor, ingrese un email válido";
+              messageBox.style.display = "block";
+              messageBox.style.color = "#ff6b6b"; // Rojo para error
+              return;
+            }
+            messageBox.textContent =
+              "✅ ¡Gracias! Te has suscrito correctamente. Revisa tu email.";
+            messageBox.style.display = "block";
+            // Ajustamos color de éxito para que contraste con fondo claro
+            messageBox.style.color = "#28a745"; // Verde oscuro
+            emailInput.value = "";
+            console.log("Email suscrito:", email);
+          });
+        document
+          .getElementById("emailInput")
+          .addEventListener("input", function () {
+            document.getElementById("messageBox").style.display = "none";
+          });
+      </script>
+    </main>
+
+    <footer>
+      <p>💰 <span class="logo-text">Ahorro con Cabeza</span> - Tu aliado financiero desde 2024</p>
+      <p>&copy; 2024 Todos los derechos reservados.</p>
+      <p>
+        <a href="politica.html">Política de Privacidad</a> |
+        <a href="contacto.html">Contacto</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorra 300€ al mes sin esfuerzo | Ahorro con Cabeza</title>
+    <meta name="description" content="8 ajustes automáticos y prácticos para ahorrar 300€ mensuales sin sacrificios.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #FAF9F6; /* <-- Fondo claro aplicado */
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+        
+        .h1-text {
+             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #667eea;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .cta-box {
+            background: #f8f9fa;
+            padding: 1.5rem; /* <-- CAMBIO: Padding uniforme */
+            margin: 2rem 0;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        /* --- AQUÍ HEMOS BORRADO EL .cta-box::before --- */
+        
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        li {
+             margin-bottom: 1.2rem; /* Más espacio entre LIs */
+             color: #555;
+        }
+        
+        /* Estilo de Adsense para fondo claro */
+        .adsense-slot {
+            background: #e9ecef;
+            border: 1px dashed #ccc;
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: #666;
+            font-weight: 600;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .h1-text {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem; /* <-- CAMBIO: Padding uniforme en móvil */
+            }
+            
+            /* --- AQUÍ HEMOS BORRADO EL .cta-box::before de móvil --- */
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .h1-text {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Ahorro con Cabeza</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ahorro">Consejos</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-content">
+            <h1>💵 <span class="h1-text">Ahorra 300€ al mes sin esfuerzo (8 Ajustes Prácticos)</span></h1>
+            
+            <p>Ahorrar 300€ al mes puede sonar a un gran sacrificio, pero a menudo se consigue "tapando" pequeñas fugas de dinero automáticas. La clave está en revisar y optimizar tus gastos fijos. Aquí tienes 8 ajustes que puedes hacer una vez y te ahorrarán dinero cada mes.</p>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <h2>Los 8 Ajustes Automáticos para Ahorrar</h2>
+
+            <ol>
+                <li><strong>Automatiza tu ahorro (El "Págate a ti primero"):</strong> Configura una transferencia automática de 50€-100€ (o lo que puedas) de tu cuenta principal a una cuenta de ahorro, justo el día que cobras. Si no lo ves, no lo gastas.</li>
+                
+                <li><strong>Auditoría de suscripciones:</strong> ¿Realmente usas Netflix, HBO, Disney+, Spotify y el gimnasio? Cancela todo lo que no uses semanalmente. A menudo son 30€-50€ al mes que se van sin darte cuenta.</li>
+                
+                <li><strong>Cambia a una cuenta sin comisiones:</strong> Si tu banco te cobra 10€ o 15€ al trimestre por mantenimiento, estás perdiendo dinero. Cámbiate a una cuenta online gratuita. (Ver nuestro post <a href="post-cuentas-sin-comisiones.html">aquí</a>).</li>
+                
+                <li><strong>Optimiza tu tarifa de móvil/Internet:</strong> ¿Pagas 50€ por gigas ilimitados que no usas? Cámbiate a una OMV (como Simyo o Digi) por 10€-15€. Ahorro inmediato de 35€/mes. (Ver nuestro post <a href="post-mejor-tarifa-movil.html">aquí</a>).</li>
+                
+                <li><strong>Activa el Cashback:</strong> Usa apps como Letyshops o iGraal antes de cualquier compra online. Recuperar un 3%-5% de tus compras habituales puede sumar 15€-20€ al mes sin esfuerzo. (Ver <a href="post-apps-cashback.html">guía de cashback</a>).</li>
+                
+                <li><strong>Activa el Redondeo:</strong> Muchas apps de bancos (Revolut, N26) o apps de ahorro te permiten "redondear" tus compras. Si pagas 1,80€ por un café, los 0,20€ restantes se van a una hucha. Son ahorros "hormiga" que suman 20€-30€ al mes.</li>
+                
+                <li><strong>Planifica tus comidas (Batch Cooking):</strong> El gasto en comida a domicilio (Glovo, Just Eat) es un agujero negro. Dedicar 2 horas a cocinar el domingo te ahorra fácilmente 100€ al mes en pedidos por pereza. (Ver <a href="post-batch-cooking.html">guía de batch cooking</a>).</li>
+                
+                <li><strong>Reduce el "Consumo Fantasma":</strong> Apaga completamente los aparatos electrónicos (TV, consolas, ordenadores) en lugar de dejarlos en stand-by. Usa regletas con interruptor. Puede parecer poco, pero suma 5€-10€ en tu factura de luz mensual.</li>
+            </ol>
+
+            <div class="cta-box">
+                <p><strong>Conclusión:</strong> No necesitas un gran esfuerzo, sino una revisión inicial. Solo con optimizar tu tarifa de móvil, cancelar 2 suscripciones y evitar la comida a domicilio, ya puedes estar ahorrando más de 150€ al mes.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>💰 <strong>Ahorro con Cabeza</strong> - Tu aliado financiero desde 2024</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+</html>

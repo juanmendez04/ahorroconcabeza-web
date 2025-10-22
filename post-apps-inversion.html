@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps de Inversión para Principiantes (Roboadvisors) | Ahorro con Cabeza</title>
+    <meta name="description" content="Comparamos MyInvestor, Indexa Capital y Finizens. Empieza a invertir de forma sencilla y automática con bajas comisiones.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .h1-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            color: #667eea;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .intro {
+            background: #f8f9fa;
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            left: 1.2rem;
+            top: 1.5rem;
+            bottom: 1.5rem;
+            width: 4px;
+            background-color: #667eea;
+            border-radius: 2px;
+        }
+
+        .app-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .app-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .app-card h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+        }
+
+        .app-detail {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .app-detail strong {
+            color: #667eea;
+        }
+        
+        ul, ol {
+             margin-bottom: 1.5rem;
+             padding-left: 1.5rem;
+        }
+        
+        li {
+             margin-bottom: 0.8rem;
+        }
+
+        .adsense-slot {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .tips-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .tips-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .tips-box p, .tips-box li {
+             color: white;
+        }
+        
+        .tips-box a {
+             color: #e0f2f7; /* Un color claro que contraste */
+             font-weight: bold;
+        }
+
+
+        .conclusion-box {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.15rem;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+        
+        .conclusion-box p {
+            color: white;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: row; /* Menú horizontal en móvil */
+                justify-content: center;
+                gap: 1.5rem;
+                width: 100%;
+                padding-top: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+            
+            nav a::after { display: none; } /* Ocultar línea bajo enlaces en móvil */
+
+            main {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            article {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .h1-text {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+                padding-left: 2rem;
+            }
+            
+            .intro::before {
+                left: 0.8rem;
+            }
+
+            .app-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1, .h1-text {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+             nav ul { gap: 1rem; } /* Menos espacio en pantallas muy pequeñas */
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Ahorro con Cabeza</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ahorro">Consejos</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="page-content">
+            <h1>📈 <span class="h1-text">¿Invertir desde el Móvil? Apps para Principiantes (Roboadvisors)</span></h1>
+
+            <div class="intro">
+                <strong>¿Ya has conseguido ahorrar? ¡Felicidades!</strong> El siguiente paso es poner ese dinero a trabajar para ti. Las apps de inversión "Roboadvisor" son la forma más sencilla y recomendada para empezar, ¡incluso si no sabes nada de bolsa!
+            </div>
+
+            <p>Olvídate de complicadas gráficas o de elegir acciones. Un Roboadvisor invierte tu dinero de forma automática en una cartera diversificada de fondos indexados, ajustada a tu perfil de riesgo y con comisiones muy bajas.</p>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <h2>¿Qué es un Roboadvisor y Por Qué Usarlo?</h2>
+            <p style="text-align: center;"><em></em></p>
+            <ul>
+                <li><strong>Automático:</strong> Hacen un test inicial para conocer tu tolerancia al riesgo y crean una cartera para ti.</li>
+                <li><strong>Diversificado:</strong> Invierten en miles de empresas de todo el mundo a través de fondos indexados (Bolsa, Bonos...).</li>
+                <li><strong>Bajas Comisiones:</strong> Mucho más baratas que los bancos tradicionales.</li>
+                <li><strong>Accesible:</strong> Puedes empezar con cantidades pequeñas (desde 150€ o 1000€ según el servicio).</li>
+                <li><strong>Basado en Evidencia:</strong> Siguen estrategias de inversión pasiva (indexación) probadas a largo plazo.</li>
+            </ul>
+
+            <h2>Las Apps Roboadvisor Más Populares en España</h2>
+            
+             <p style="text-align: center;"><em></em></p>
+
+            <div class="app-card">
+                <h2>1. MyInvestor</h2>
+                 <p style="text-align: center;"><em></em></p>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Ofrecen "Carteras Indexadas" (su roboadvisor) desde solo 150€. Haces el test, eliges la cartera (Clásica, Pop, Rock, Indie, Metal) y haces tu aportación inicial o periódica.
+                </div>
+                <div class="app-detail">
+                    <strong>Lo mejor:</strong> Inversión mínima muy baja (150€), comisiones totales muy competitivas (aprox. 0.30% anual), es también un neobanco con cuenta remunerada. App sencilla.
+                </div>
+                <div class="app-detail">
+                    <strong>A tener en cuenta:</strong> Su selección de fondos es buena pero quizás menos amplia que Indexa para carteras grandes.
+                </div>
+                 <p style="text-align: center;"><em></em></p>
+            </div>
+
+            <div class="app-card">
+                <h2>2. Indexa Capital</h2>
+                <p style="text-align: center;"><em></em></p>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> El roboadvisor líder y pionero en España. Haces un test muy completo, te proponen una cartera personalizada (del 1 al 10) y puedes empezar a invertir.
+                </div>
+                <div class="app-detail">
+                    <strong>Lo mejor:</strong> Muy transparentes, excelente diversificación (usan más fondos, incluyendo bonos globales), comisiones bajas que disminuyen cuanto más inviertes. Muy buena reputación.
+                </div>
+                <div class="app-detail">
+                    <strong>A tener en cuenta:</strong> La inversión mínima es más alta (3.000€). Su app es funcional pero quizás menos moderna que otras.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>3. Finizens</h2>
+                 <p style="text-align: center;"><em></em></p>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Similar a Indexa. Haces un test, te asignan una de sus 5 carteras (de conservadora a atrevida) y empiezas a invertir. Tienen un programa "Tú por delante" que baja la comisión cada año que sigues con ellos.
+                </div>
+                <div class="app-detail">
+                    <strong>Lo mejor:</strong> Inversión mínima baja (1.000€), programa de reducción de comisiones por antigüedad, buena diversificación.
+                </div>
+                <div class="app-detail">
+                    <strong>A tener en cuenta:</strong> Sus comisiones iniciales son ligeramente más altas que MyInvestor, aunque bajan con el tiempo.
+                </div>
+            </div>
+            
+            <p><strong>Otras opciones:</strong> InbestMe, Popcoin (Bankinter)...</p>
+
+            <h2>Pasos para Empezar a Invertir con un Roboadvisor</h2>
+             <p style="text-align: center;"><em></em></p>
+            <ol>
+                <li><strong>Elige tu Roboadvisor:</strong> Compara mínimos de inversión y comisiones. Para empezar con poco, MyInvestor es ideal. Si tienes más capital, Indexa es excelente.</li>
+                <li><strong>Regístrate y Haz el Test:</strong> Completa el proceso de alta online (necesitarás tu DNI) y responde sinceramente al test de perfil de riesgo.</li>
+                <li><strong>Revisa tu Cartera Propuesta:</strong> El roboadvisor te mostrará la cartera recomendada (ej. 60% Bolsa, 40% Bonos). Asegúrate de que entiendes en qué invierte.</li>
+                <li><strong>Haz tu Primera Aportación:</strong> Transfiere el dinero desde tu banco habitual (la cantidad mínima requerida o más).</li>
+                <li><strong>Automatiza Aportaciones (Opcional pero Recomendado):</strong> Programa transferencias periódicas (ej. 100€ al mes). Es la mejor forma de invertir a largo plazo (estrategia DCA).</li>
+                <li><strong>¡Paciencia y Largo Plazo!:</strong> La inversión indexada funciona a largo plazo (10+ años). Habrá subidas y bajadas. No te asustes por las caídas temporales. Revisa tu cartera una vez al año, no cada día.</li>
+            </ol>
+
+            <div class="tips-box">
+                <h3>⚠️ Importante: Riesgo y Largo Plazo</h3>
+                <p>Invertir siempre implica riesgo. La rentabilidad pasada no garantiza la futura. Los roboadvisors diversifican para minimizar riesgo, pero tu capital puede fluctuar.</p>
+                <p><strong>Regla de Oro:</strong> Invierte solo dinero que NO necesites en los próximos 5-10 años. Para tu <a href="post-mil-euros-ahorrados.html">colchón de emergencia</a>, usa una cuenta de ahorro.</p>
+                <p>La inversión con roboadvisors es una estrategia pensada para el <strong>largo plazo</strong> (jubilación, comprar casa en 15 años...).</p>
+            </div>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <div class="conclusion-box">
+                <h3 style="color: white; margin-top: 0;">✅ Conclusión: Empieza a Invertir Fácilmente</h3>
+                <p>Los roboadvisors han democratizado la inversión. Son la herramienta perfecta para principiantes que quieren poner su dinero a trabajar de forma sencilla, automática y con bajas comisiones.</p>
+                <p>¡Investiga un poco más sobre el que más te convenza y da el paso!</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>💰 <strong>Ahorro con Cabeza</strong> - Tu aliado financiero desde 2024</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+</html>

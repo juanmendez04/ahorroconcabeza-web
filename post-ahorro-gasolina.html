@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorra en gasolina: 10 trucos para gastar 40€ menos al mes | Ahorro con Cabeza</title>
+    <meta name="description" content="Apps de gasolineras baratas, conducción eficiente y trucos reales para reducir el consumo de gasolina.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #FAF9F6; /* <-- CAMBIO 1: Fondo claro */
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 1100px; /* Ancho de este artículo, lo respetamos */
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Corrección de emoji en H1 */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .h1-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1rem;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Corrección de borde intro */
+        .intro {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem 2rem 2rem 2.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
+            position: relative;
+        }
+        
+        .intro::before {
+            content: '';
+            position: absolute;
+            left: 1.2rem;
+            top: 2rem;
+            bottom: 2rem;
+            width: 4px;
+            background-color: #667eea;
+            border-radius: 2px;
+        }
+
+
+        .tip-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .tip-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* <-- CAMBIO 2: Estilos de Adsense actualizados */
+        .adsense-slot {
+            background: #e9ecef; /* Fondo gris medio */
+            border: 1px dashed #ccc; /* Borde más sutil */
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: #666; /* Texto gris oscuro */
+            font-weight: 600;
+        }
+
+        .savings-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-left: 0.5rem;
+        }
+
+        .app-highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .app-highlight h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .app-item {
+            background: white;
+            color: #667eea;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+        
+        .summary-box p {
+            color: white; /* Aseguramos texto blanco */
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+
+        /* ----- INICIO DE ESTILOS RESPONSIVE MEJORADOS ----- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            article {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .h1-text {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .savings-badge {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+                padding-left: 2rem; /* Mantenemos espacio para la línea */
+            }
+            
+            .intro::before {
+                left: 0.8rem; /* Ajustamos la línea */
+            }
+
+            .app-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .h1-text {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+        /* ----- FIN DE ESTILOS RESPONSIVE MEJORADOS ----- */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Ahorro con Cabeza</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="post-ahorrar-300.html">Consejos</a></li>
+                <li><a href="post-apps-caminar.html">Apps</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="page-content">
+            <h1>🚗 <span class="h1-text">Ahorra en gasolina: 10 trucos que te harán gastar 40€ menos al mes</span></h1>
+
+            <div class="intro">
+                <strong>¿Gastas demasiado en gasolina?</strong> Con estos 10 trucos probados puedes reducir tu gasto hasta 40€ al mes sin cambiar de coche. Apps inteligentes, conducción eficiente y hábitos simples que marcan la diferencia.
+            </div>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <div class="tip-card">
+                <h2>1️⃣ Usa apps para encontrar gasolineras baratas <span class="savings-badge">5-10€/mes</span></h2>
+                <p>Apps como <strong>Gasolineras España</strong>, <strong>Gasolina y Gasóleo</strong> o <strong>Repsol Waylet</strong> te muestran precios en tiempo real. La diferencia entre la más cara y más barata puede ser de 0,15€/litro.</p>
+                <p><strong>Truco:</strong> Repostaje siempre en low-cost (Plenoil, Ballenoil, Petroprix). Ahorras hasta 8-10 céntimos por litro.</p>
+            </div>
+
+            <div class="app-highlight">
+                <h3>📱 Las mejores apps para comparar precios:</h3>
+                <div class="app-list">
+                    <div class="app-item">📍 Gasolineras España</div>
+                    <div class="app-item">⛽ Gasolina y Gasóleo</div>
+                    <div class="app-item">💳 Repsol Waylet</div>
+                    <div class="app-item">🔍 Diesel Gasolina España</div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <h2>2️⃣ Repostaje en días específicos <span class="savings-badge">3-5€/mes</span></h2>
+                <p>Los precios suelen subir justo antes del fin de semana (jueves-viernes). <strong>Mejor día: lunes o martes</strong>. Algunos low-cost tienen descuentos específicos entre semana.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>3️⃣ Conducción eficiente: acelera suave <span class="savings-badge">8-12€/mes</span></h2>
+                <p>Aceleraciones bruscas aumentan el consumo hasta un 20%. Acelera suavemente y anticipa frenadas. Usa el freno motor en bajadas.</p>
+                <p><strong>Truco:</strong> Mantén velocidad constante en autopista (100-110 km/h en lugar de 120 km/h reduce consumo un 15%).</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>4️⃣ Presión correcta de neumáticos <span class="savings-badge">4-6€/mes</span></h2>
+                <p>Neumáticos desinflados aumentan consumo hasta un 3%. Revisa la presión cada 15 días. La presión recomendada está en la puerta del conductor o manual.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>5️⃣ Apaga el motor en paradas largas <span class="savings-badge">2-4€/mes</span></h2>
+                <p>Si vas a estar parado más de 1 minuto (semáforos largos, esperas), apaga el motor. Los coches modernos con Start-Stop lo hacen automático.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>6️⃣ Reduce peso innecesario <span class="savings-badge">2-3€/mes</span></h2>
+                <p>Por cada 100kg extra, el consumo aumenta un 5%. Quita baca del techo si no la usas, vacía el maletero de cosas innecesarias.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>7️⃣ Planifica rutas eficientes <span class="savings-badge">3-5€/mes</span></h2>
+                <p>Usa Waze o Google Maps para evitar atascos. El tráfico lento aumenta consumo significativamente. Agrupa recados en un solo viaje.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>8️⃣ Aire acondicionado inteligente <span class="savings-badge">3-5€/mes</span></h2>
+                <p>El A/C aumenta consumo un 10-15%. En ciudad a velocidad baja, mejor ventanas. En autopista, A/C (ventanas abiertas crean resistencia).</p>
+                <p><strong>Truco:</strong> Usa recirculación de aire para enfriar más rápido.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>9️⃣ Mantenimiento al día <span class="savings-badge">5-8€/mes</span></h2>
+                <p>Filtros sucios, aceite viejo o bujías gastadas aumentan consumo. Respeta los intervalos de mantenimiento. Un motor bien cuidado consume menos.</p>
+            </div>
+
+            <div class="tip-card">
+                <h2>🔟 Carpooling o transporte compartido <span class="savings-badge">10-20€/mes</span></h2>
+                <p>Comparte coche con compañeros de trabajo o usa apps como BlaBlaCar para viajes largos. Divides gastos y reduces tu gasto mensual drásticamente.</p>
+            </div>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <div class="summary-box">
+                <h2 style="color: white; margin-top: 0;">📊 Resumen: Tu plan de ahorro en gasolina</h2>
+                <p><strong>Aplicando 5-6 de estos trucos puedes ahorrar fácilmente 40€ al mes (480€ al año).</strong></p>
+                <p>✅ Descarga una app de comparación de precios (imprescindible)<br>
+                ✅ Repostaje en low-cost y entre semana<br>
+                ✅ Conducción suave y anticipada<br>
+                ✅ Mantenimiento al día<br>
+                ✅ Presión de neumáticos correcta</p>
+                <p style="margin-top: 1rem; font-size: 1.2rem;"><strong>Empieza hoy mismo. Tu bolsillo lo notará desde el primer depósito. 🚗💨</strong></p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>💰 <strong>Ahorro con Cabeza</strong> - Tu aliado financiero desde 2024</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+</html>

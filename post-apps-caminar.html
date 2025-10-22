@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 apps que te pagan por caminar (probadas) | Ahorro con Cabeza</title>
+    <meta name="description" content="Descubre 7 apps fiables que te pagan por caminar y cómo convertir pasos en dinero o premios.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            /* Color de fondo original */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        article {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Corrección de emoji en H1 */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        .h1-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            color: #667eea;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        /* Corrección de borde intro */
+        .intro {
+            background: #f8f9fa;
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-size: 1.15rem;
+            position: relative;
+        }
+
+        .intro::before {
+            content: '';
+            position: absolute;
+            left: 1.2rem;
+            top: 1.5rem;
+            bottom: 1.5rem;
+            width: 4px;
+            background-color: #667eea;
+            border-radius: 2px;
+        }
+
+        .app-card {
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .app-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .app-card h2 {
+            margin-top: 0;
+            font-size: 1.7rem;
+        }
+
+        .app-detail {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .app-detail strong {
+            color: #667eea;
+        }
+
+        .adsense-slot {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        .tips-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .tips-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .tips-box ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .tips-box li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 1.15rem;
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+        }
+        
+        .conclusion-box p {
+            color: white; /* Aseguramos que el texto sea blanco */
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+
+        /* ----- INICIO DE ESTILOS RESPONSIVE MEJORADOS ----- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem; /* Añadido padding */
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%; /* Añadido ancho completo */
+            }
+
+            .logo {
+                font-size: 1.5rem; /* Reducido para móviles */
+            }
+
+            main {
+                padding: 1rem; /* Padding reducido en móvil */
+                margin: 1rem auto; /* Margen reducido */
+            }
+
+            article {
+                padding: 1.5rem; /* Padding interno reducido */
+            }
+
+            h1 {
+                font-size: 1.8rem; /* Tamaño de H1 móvil */
+            }
+            
+            .h1-text {
+                font-size: 1.8rem; /* Tamaño de H1 móvil */
+            }
+
+            h2 {
+                font-size: 1.5rem; /* Tamaño de H2 móvil */
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+                padding-left: 2rem; /* Mantenemos espacio para la línea */
+            }
+            
+            .intro::before {
+                left: 0.8rem; /* Ajustamos la línea */
+            }
+
+            .app-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .h1-text {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+        /* ----- FIN DE ESTILOS RESPONSIVE MEJORADOS ----- */
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Ahorro con Cabeza</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="post-ahorrar-300.html">Consejos</a></li>
+                <li><a href="post-apps-caminar.html">Apps</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="page-content">
+            <h1>🚶 <span class="h1-text">7 apps probadas (Sweatcoin, StepBet, etc.) que te pagan por caminar</span></h1>
+
+            <div class="intro">
+                <strong>¿Te pagan por caminar?</strong> Sí, es real. Aquí tienes 7 opciones verificadas que convierten tus pasos en dinero, premios o criptomonedas. No te harás rico, pero con constancia puedes generar un ingreso extra mensual.
+            </div>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <div class="app-card">
+                <h2>1. 💎 Sweatcoin - La más popular</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Registra tus pasos automáticamente y te paga con su propia "moneda" (Sweatcoin). Puedes canjear por productos, descuentos o donar a causas benéficas.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Sincroniza con tu smartwatch para no perder ningún paso. Acumula durante varios meses para acceder a premios grandes. Participa en los retos diarios para bonos extra.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>2. 📊 Google Opinion Rewards - Encuestas y Premios</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Aunque es principalmente de encuestas, lanza preguntas basadas en tu actividad y ubicación. Las recompensas se acumulan para Google Play o PayPal.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Responde rápidamente las encuestas (caducan). Activa las notificaciones. Sé honesto en las respuestas para recibir más encuestas.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>3. 🏃 Runtastic Rewards - Cashback por retos de salud</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Retos semanales asociados a actividad física con recompensas, descuentos en productos deportivos o puntos canjeables.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Participa en retos cooperativos para bonos. Aprovecha los desafíos de distancia mensual. Conecta con amigos para motivación extra.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>4. 📱 AttaPoll - Combina encuestas + pasos</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Combina encuestas cortas con tareas de actividad. El saldo se acumula y puedes retirarlo vía PayPal desde 3€.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Responde las encuestas de mayor pago primero. Completa tu perfil 100% para más ofertas. Revisa la app diariamente.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>5. 🎲 StepBet - Apuestas en pasos</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Entras en juegos de apuestas donde ganas si cumples tus metas de pasos. Si fallas, pierdes la apuesta. El premio se reparte entre ganadores.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Elige desafíos que se ajusten a tu ritmo normal (no te sobrestimes). Revisa el historial de éxito del juego. Empieza con apuestas pequeñas.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>6. 🏆 Achievement - Integra apps de salud</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Se conecta a varias apps de salud (Google Fit, Apple Health, Fitbit) y te da puntos por cualquier actividad registrada. Puntos convertibles en PayPal.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Conecta todas las apps de fitness que uses. Los puntos se acumulan lentamente pero es dinero pasivo. 10,000 puntos = 10€.
+                </div>
+            </div>
+
+            <div class="app-card">
+                <h2>7. 💸 Wirtual - Tokens y Cripto por actividad</h2>
+                <div class="app-detail">
+                    <strong>Cómo funciona:</strong> Paga pequeñas fracciones de su token por la actividad que rastreas. Es una forma de ganar criptomonedas sin invertir.
+                </div>
+                <div class="app-detail">
+                    <strong>💡 Trucos:</strong> Revisa comisiones de retiro. Retira en lotes grandes si el token tiene valor. Vigila la cotización antes de convertir.
+                </div>
+            </div>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <div class="tips-box">
+                <h3>🎯 Consejos rápidos para maximizar ganancias</h3>
+                <ul>
+                    <li><strong>Usa varias apps simultáneamente</strong> - La mayoría permite uso conjunto</li>
+                    <li><strong>Aprovecha bonos de registro</strong> - Suelen dar recompensas iniciales</li>
+                    <li><strong>Haz micro-rutinas de 20-30 minutos</strong> - Para completar desafíos diarios</li>
+                    <li><strong>Configura notificaciones</strong> - No pierdas oportunidades de retos</li>
+                    <li><strong>Mantén el móvil contigo</strong> - Especialmente en Sweatcoin que solo cuenta pasos outdoor</li>
+                </ul>
+            </div>
+
+            <div class="conclusion-box">
+                <h3 style="color: white; margin-top: 0;">✅ Conclusión</h3>
+                <p><strong>No vas a hacerte rico, pero con constancia puedes sumar 20-50€ al mes.</strong></p>
+                <p>Elige 2-3 apps que te gusten, optimiza notificaciones y olvídate. El dinero llegará solo mientras haces tu vida normal. 🚶</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>💰 <strong>Ahorro con Cabeza</strong> - Tu aliado financiero desde 2024</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+</html>

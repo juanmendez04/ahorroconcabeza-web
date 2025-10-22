@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Cooking para principiantes: Ahorra 80€ al mes | Ahorro con Cabeza</title>
+    <meta name="description" content="Guía de Batch Cooking para principiantes. Cocina 2 horas un día y come toda la semana. Incluye menú de ejemplo.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .page-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Corrección de emoji en H1 */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+        
+        .h1-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #667eea;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem;
+            color: #764ba2;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Corrección de borde en .cta-box */
+        .cta-box {
+            background: #f8f9fa;
+            /* Aumentamos padding izquierdo para la línea */
+            padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            position: relative; /* Necesario para la línea */
+            /* Se elimina el border-left problemático */
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            left: 1.2rem;
+            top: 1.5rem;
+            bottom: 1.5rem;
+            width: 4px;
+            background-color: #667eea;
+            border-radius: 2px;
+        }
+        
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        li {
+             margin-bottom: 0.8rem;
+             color: #555;
+        }
+        
+        .adsense-slot {
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+            color: white;
+            font-weight: 600;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            margin-top: 3rem;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: #666;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            color: #764ba2;
+        }
+        
+        /* ----- INICIO DE ESTILOS RESPONSIVE MEJORADOS ----- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 1rem;
+                margin: 1rem auto;
+            }
+
+            .page-content {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .h1-text {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem;
+                padding-left: 2rem;
+            }
+            
+            .cta-box::before {
+                left: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .h1-text {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+        /* ----- FIN DE ESTILOS RESPONSIVE MEJORADOS ----- */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 Ahorro con Cabeza</div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#ahorro">Consejos</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="acerca.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-content">
+            <h1>🍲 <span class="h1-text">El método 'Batch Cooking' para principiantes: Ahorra 80€ al mes en comida</span></h1>
+            
+            <p>El "Batch Cooking" suena complicado, pero no es más que "cocinar por lotes". La idea es simple: <strong>dedicas 2-3 horas un día</strong> (como el domingo por la tarde) a preparar las bases de la comida de toda la semana.</p>
+            <p>¿El resultado? Evitas pedir comida a domicilio por pereza, comes más sano y ahorras muchísimo dinero en el supermercado porque compras solo lo necesario.</p>
+
+            <div class="adsense-slot">
+                📢 ESPACIO PUBLICITARIO - GOOGLE ADSENSE
+            </div>
+
+            <h2>Los 4 Pilares del Batch Cooking</h2>
+            <p>No tienes que cocinar 5 platos distintos. Solo tienes que preparar las bases y luego combinarlas.</p>
+
+            <ol>
+                <li><strong>Prepara un cereal:</strong> Cuece una olla grande de arroz integral o quinoa. Guárdalo en un tupper en la nevera.</li>
+                <li><strong>Prepara una legumbre:</strong> Cuece una bolsa de lentejas o garbanzos (o usa botes de conserva, ¡no pasa nada!).</li>
+                <li><strong>Asa verduras:</strong> Trocea brócoli, zanahoria, pimiento y calabacín. Échales aceite y sal, y ásalos en una bandeja de horno 30 minutos.</li>
+                <li><strong>Prepara una proteína:</strong> Haz pechugas de pollo a la plancha, cuece 6-8 huevos duros o prepara una boloñesa de carne picada.</li>
+            </ol>
+            
+            <p>Con estas 4 preparaciones en tu nevera, puedes montar tus comidas en 3 minutos.</p>
+
+            <h2>Ejemplo de Menú de 3 Días (Combinando)</h2>
+            
+            <h3>Lunes: Bowl Completo</h3>
+            <ul>
+                <li><strong>Base:</strong> Quinoa.</li>
+                <li><strong>Encima:</strong> Un puñado de garbanzos, las verduras asadas y un huevo duro troceado.</li>
+                <li><strong>Tiempo:</strong> 2 minutos.</li>
+            </ul>
+
+            <h3>Martes: Plato de Cuchara</h3>
+            <ul>
+                <li><strong>Base:</strong> Lentejas.</li>
+                <li><strong>Encima:</strong> Añade un poco de arroz y las verduras asadas. Calienta todo junto.</li>
+                <li><strong>Tiempo:</strong> 3 minutos.</li>
+            </ul>
+            
+            <h3>Miércoles: Ensalada o Plato combinado</h3>
+            <ul>
+                <li><strong>Base:</strong> Pollo a la plancha (frío o caliente).</li>
+                <li><strong>Encima:</strong> Acompaña con el resto de las verduras asadas y un poco de quinoa.</li>
+                <li><strong>Tiempo:</strong> 2 minutos.</li>
+            </ul>
+
+            <div class="cta-box">
+                <p><strong>El Ahorro Real:</strong> Al tener la comida lista, eliminas por completo la tentación de gastar 10€-15€ en un Glovo o un Just Eat porque "no te apetece cocinar". Si evitas solo dos pedidos a domicilio a la semana, ya estás ahorrando más de 80€ al mes.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>💰 <strong>Ahorro con Cabeza</strong> - Tu aliado financiero desde 2024</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p><a href="politica.html">Política de Privacidad</a> | <a href="contacto.html">Contacto</a></p>
+    </footer>
+</body>
+</html>
