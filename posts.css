@@ -1,0 +1,260 @@
+/* ============================================
+Estilos Específicos para Artículos (Posts)
+============================================
+*/
+
+/* --- Contenedor de Artículo --- */
+/*
+  La mayoría de estilos de .page-content (fondo, padding, sombra)
+  ya están en styles.css. Aquí solo irían modificaciones
+  específicas para los artículos, si las hubiera.
+*/
+
+/* --- Bloque de Introducción (usado en posts) --- */
+.intro {
+  background: var(--bg-light-gray);
+  padding: 1.5rem; /* Padding uniforme */
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  /* position: relative; ya no es necesario */
+}
+
+/* --- Caja de CTA (usada en posts) --- */
+.cta-box {
+  background: var(--bg-light-gray);
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+.cta-box::before {
+  content: '';
+  position: absolute;
+  left: 1.2rem;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  width: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* --- Tarjetas de Apps (usadas en comparativas) --- */
+.app-card {
+  background: white;
+  border: 2px solid var(--bg-medium-gray);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.app-card:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+  transform: translateY(-5px);
+}
+
+.app-card h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+.app-detail {
+  background: var(--bg-light-gray);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.app-detail strong {
+  color: var(--primary-color);
+}
+
+/* --- Tarjetas de Tips (usadas en post-gasolina) --- */
+.tip-card {
+    background: white;
+    border: 2px solid var(--bg-medium-gray);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+    transform: translateY(-3px);
+}
+
+.savings-badge {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+}
+
+.app-highlight {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.app-highlight h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.app-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.app-item {
+    background: white;
+    color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+
+/* --- Caja de Tips (fondo oscuro) --- */
+.tips-box {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.tips-box h3 {
+  color: white;
+  margin-top: 0;
+}
+
+.tips-box p,
+.tips-box li {
+  color: white;
+}
+
+.tips-box a {
+  color: #e0f2f7; /* Un color claro que contraste */
+  font-weight: bold;
+}
+
+/* --- Caja de Conclusión (fondo verde) --- */
+.conclusion-box {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 1.15rem;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.conclusion-box h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.conclusion-box p {
+  color: white;
+}
+
+/* --- Resumen de Gasolina (fondo verde) --- */
+.summary-box {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+.summary-box h2 {
+    color: white;
+    margin-top: 0;
+}
+
+.summary-box p {
+    color: white;
+}
+
+
+/* --- Espacio Publicitario (Unificado para fondo claro) --- */
+.adsense-slot {
+  background: var(--bg-medium-gray);
+  border: 1px dashed #ccc;
+  border-radius: 15px;
+  padding: 3rem;
+  text-align: center;
+  margin: 3rem 0;
+  color: #666;
+  font-weight: 600;
+}
+
+/* --- Media Queries Específicas de Posts --- */
+@media (max-width: 768px) {
+  .intro,
+  .cta-box {
+    padding: 1.5rem;
+    padding-left: 2rem;
+  }
+
+  .intro::before,
+  .cta-box::before {
+    left: 0.8rem;
+  }
+
+  .app-card {
+    padding: 1.5rem;
+  }
+  
+  .tip-card h2 {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  
+  .savings-badge {
+      margin-left: 0;
+      margin-top: 0.5rem;
+  }
+  
+  .app-list {
+      grid-template-columns: 1fr;
+  }
+}
+
+/* NUEVA CLASE:
+  Caja CTA sin la línea '::before'
+  (Para la conclusión de post-ahorrar-300)
+*/
+.cta-box-simple {
+  background: var(--bg-light-gray);
+  padding: 1.5rem; /* Padding uniforme, sin espacio para la línea */
+  margin: 2rem 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Oculta todos los bloques de anuncios 
+*/
+.adsense-slot {
+  display: none !important;
+}
